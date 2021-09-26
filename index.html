@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="main.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+      integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://code.jquery.com/jquery-1.12.4.js" defer></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" defer></script>
+    <title>Navigation</title>
+    <script src="main.js" defer></script>
+  </head>
+
+  <body>
+    <div id="nav" class="navigation active">
+      <div class="header">
+        <div class="icon active">
+          <i class="fas fa-plus"></i>
+        </div>
+      </div>
+      <div class="item-list">
+        <!-- Home -->
+        <div class="item">
+          <div class="icon">
+            <i class="fas fa-home"></i>
+          </div>
+          <div class="text">Home</div>
+        </div>
+        <!-- Profile -->
+        <div class="item">
+          <div class="icon">
+            <i class="fas fa-user"></i>
+          </div>
+          <div class="text">Profile</div>
+        </div>
+        <!-- Message -->
+        <div class="item">
+          <div class="icon">
+            <i class="fas fa-comments"></i>
+          </div>
+          <div class="text">Message</div>
+        </div>
+        <!-- settings -->
+        <div class="item">
+          <div class="icon">
+            <i class="fas fa-cog"></i>
+          </div>
+          <div class="text">Settings</div>
+        </div>
+        <!-- Password -->
+        <div class="item">
+          <div class="icon">
+            <i class="fas fa-key"></i>
+          </div>
+          <div class="text">Password</div>
+        </div>
+        <!-- Sign out -->
+        <div class="item">
+          <div class="icon">
+            <i class="fas fa-sign-out-alt"></i>
+          </div>
+          <div class="text">Sign Out</div>
+        </div>
+      </div>
+    </div>
+    <div class="instruction">
+      <span>Double click on header icon to toggle menu.</span>
+    </div>
+    <div class="reset-button">
+      <button id="reset-menu">
+        <i class="fas fa-redo"></i>
+      </button>
+    </div>
+  </body>
+</html>

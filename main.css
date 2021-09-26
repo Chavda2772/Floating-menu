@@ -1,0 +1,142 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #d3e0ea;
+  color: white;
+}
+
+.navigation {
+  border-radius: 6px;
+  overflow: hidden;
+  background-color: white;
+  position: absolute;
+}
+
+.navigation .header {
+  display: flex;
+  justify-content: end;
+  background-color: #3d56b2;
+  cursor: pointer;
+}
+
+.navigation .header .icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  font-size: 25px;
+  font-weight: bold;
+  height: 50px;
+  width: 50px;
+  cursor: pointer;
+}
+
+.navigation .header .icon i {
+  transition: all 0.5s ease-in-out;
+}
+
+.navigation.active .header .icon i {
+  transition-property: transform;
+  transform: rotate(405deg);
+}
+
+.item-list {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  cursor: pointer;
+  width: 0px;
+  height: 0px;
+  transition: height 0.5s, width 0.5s;
+  transition-delay: 0s, 0.75s;
+}
+
+.item-list .item:active {
+  transform: scale(0.98);
+}
+
+.navigation.active .item-list {
+  width: 300px;
+  height: 300px;
+}
+
+.item-list .item {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+}
+
+.item-list .item:hover {
+  background-color: #5c7aea;
+}
+
+.item-list .item:hover .icon,
+.item-list .item:hover .text {
+  color: white;
+  font-weight: bold;
+}
+
+.item-list .item .icon {
+  min-width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #5c7aea;
+}
+
+.item-list .item .text {
+  display: flex;
+  align-items: center;
+  padding-left: 15px;
+  color: black;
+  user-select: none;
+}
+
+.instruction {
+  position: absolute;
+  z-index: 5;
+  top: 0;
+  color: black;
+  user-select: none;
+  pointer-events: none;
+}
+
+.reset-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.reset-button button {
+  height: 40px;
+  width: 40px;
+  border: none;
+  background-color: #3d56b2;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.reset-button button i {
+  transition: 0.5s;
+}
+
+.reset-button button:active {
+  transform: scale(0.95);
+}
+.reset-button button:hover i {
+  transform: rotate(360deg);
+}
+
+.reset-button button i {
+  color: white;
+}

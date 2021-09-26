@@ -13,6 +13,11 @@ document.getElementById("reset-menu").addEventListener("click", function () {
   }
 });
 
+document.getElementById("toggle-micro").addEventListener("click", function () {
+  this.classList.toggle("active");
+  nav.classList.toggle("micro");
+});
+
 $(function () {
   $(".navigation").draggable();
 });

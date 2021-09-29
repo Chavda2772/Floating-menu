@@ -6,8 +6,9 @@ body {
   font-family: "Helvetica Neue", Helvetica, Arial;
   margin: 0;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-direction: row;
+  /* align-items: center;
+  justify-content: center; */
   height: 100vh;
   background-color: #d3e0ea;
   color: white;
@@ -17,7 +18,9 @@ body {
   border-radius: 6px;
   /* overflow: hidden; */
   background-color: white;
-  position: absolute;
+  position: relative;
+  top: 0;
+  left: 0;
 }
 
 .navigation .header {
@@ -39,15 +42,6 @@ body {
   cursor: pointer;
 }
 
-.navigation .header .icon i {
-  transition: all 0.5s ease-in-out;
-}
-
-.navigation.active .header .icon i {
-  transition-property: transform;
-  transform: rotate(405deg);
-}
-
 .item-list {
   display: flex;
   justify-content: flex-start;
@@ -56,7 +50,6 @@ body {
   width: 0px;
   height: 0px;
   transition: height 0.5s, width 0.5s;
-  transition-delay: 0s, 0.4s;
   overflow: hidden;
 }
 
@@ -121,46 +114,20 @@ body {
   user-select: none;
 }
 
-.instruction {
-  position: absolute;
-  z-index: 5;
-  top: 0;
+.background-text {
+  width: 100%;
+  height: 100%;
+  /* background-color: rgb(172, 255, 172); */
   color: black;
-  user-select: none;
-  pointer-events: none;
-}
-
-.reset-button {
-  position: absolute;
   display: flex;
-  flex-direction: column;
-  top: 10px;
-  right: 10px;
+  align-items: center;
+  justify-content: center;
 }
 
-.reset-button button {
-  height: 40px;
-  width: 40px;
-  border: none;
-  background-color: #3d56b2;
-  cursor: pointer;
-}
-
-.reset-button button i {
-  transition: 0.5s;
-}
-
-.reset-button button:active {
-  transform: scale(0.95);
-}
-.reset-button button#reset-menu:hover i {
-  transform: rotate(360deg);
-}
-
-.reset-button button i {
-  color: white;
-}
-
-.reset-button #toggle-micro.active {
-  background-color: lightcoral;
+#selectedPage {
+  opacity: 0.3;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  transform: rotate(-20deg);
+  font-size: 8rem;
+  user-select: none;
 }

@@ -11,8 +11,8 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <script src="https://code.jquery.com/jquery-1.12.4.js" defer></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" defer></script>
+    <!-- <script src="https://code.jquery.com/jquery-1.12.4.js" defer></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" defer></script> -->
     <title>Navigation</title>
     <script src="main.js" defer></script>
   </head>
@@ -20,8 +20,9 @@
   <body>
     <div id="nav" class="navigation active">
       <div class="header">
-        <div class="icon active">
-          <i class="fas fa-plus"></i>
+        <div class="icon">
+          <i class="fas fa-times"></i>
+          <!-- <i class="fas fa-times"></i> -->
         </div>
       </div>
       <div class="item-list">
@@ -69,16 +70,8 @@
         </div>
       </div>
     </div>
-    <div class="instruction">
-      <span>Double click on header icon to toggle menu.</span>
-    </div>
-    <div class="reset-button">
-      <button id="reset-menu">
-        <i class="fas fa-redo"></i>
-      </button>
-      <button id="toggle-micro">
-        <i class="fas fa-bars"></i>
-      </button>
+    <div class="background-text">
+      <h1 id="selectedPage">Home</h1>
     </div>
   </body>
 </html>

@@ -117,17 +117,21 @@ body {
 .background-text {
   width: 100%;
   height: 100%;
-  /* background-color: rgb(172, 255, 172); */
   color: black;
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+}
+
+#pageIcon {
+  opacity: 0.3;
+  font-size: 8rem;
 }
 
 #selectedPage {
   opacity: 0.3;
   font-family: Georgia, "Times New Roman", Times, serif;
-  transform: rotate(-20deg);
-  font-size: 8rem;
+  font-size: 4rem;
   user-select: none;
 }

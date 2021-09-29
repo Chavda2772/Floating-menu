@@ -17,5 +17,7 @@ navItems.forEach(function (item, idx) {
   item.addEventListener("click", function (e) {
     document.getElementById("selectedPage").innerHTML =
       item.getAttribute("data-text");
+    document.getElementById("pageIcon").className =
+      item.children[0].children[0].classList.value;
   });
 });

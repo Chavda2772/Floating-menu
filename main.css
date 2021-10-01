@@ -114,6 +114,15 @@ body {
   user-select: none;
 }
 
+.item-list .item.active {
+  background-color: #5c7aea;
+}
+
+.item-list .item.active .icon,
+.item-list .item.active .text {
+  color: white;
+}
+
 .background-text {
   width: 100%;
   height: 100%;

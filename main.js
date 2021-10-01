@@ -15,9 +15,20 @@ navIcon.addEventListener("click", function (e) {
 
 navItems.forEach(function (item, idx) {
   item.addEventListener("click", function (e) {
+    removeActive();
     document.getElementById("selectedPage").innerHTML =
       item.getAttribute("data-text");
     document.getElementById("pageIcon").className =
       item.children[0].children[0].classList.value;
+
+    item.classList.add("active");
   });
 });
+
+function removeActive() {
+  navItems.forEach(function (item, idx) {
+    if (item.classList.contains("active")) {
+      item.classList.remove("active");
+    }
+  });
+}
